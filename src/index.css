@@ -1,13 +1,143 @@
-body {
+/* General Reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container Styling */
+#root {
+  width: 90%;
+  max-width: 800px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #4caf50;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* Task Form */
+form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button.delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button.delete:hover {
+  background-color: #c0392b;
+}
+
+button.edit {
+  background-color: #3498db;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #2980b9;
+}
+
+/* Task Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+  text-transform: capitalize;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+span {
+  display: block;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+
+  th,
+  td {
+    font-size: 0.9rem;
+  }
+}
+/* Buttons in Table */
+td button {
+  margin-right: 10px; /* Adds a gap between buttons */
+}
+
+td button:last-child {
+  margin-right: 0; /* Ensures the last button has no extra spacing */
 }
